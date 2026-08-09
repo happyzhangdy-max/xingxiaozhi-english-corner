@@ -8,6 +8,7 @@ No release-blocking tasks.
 
 ## Completed
 
+- [x] Publish the English Corner at `english.行小之.com` and connect it to the Japanese Corner custom domain without replacing the existing apex homepage.
 - [x] Confirm `happyzhangdy-max`, create the public repository, and enable private vulnerability reporting and Pages workflow publishing.
 - [x] Push `main`; pass Windows, macOS, and Linux CI; deploy and verify the live GitHub Pages site.
 - [x] Implement homepage, lookup, image OCR, autoplay, adventure, and secondary due review.

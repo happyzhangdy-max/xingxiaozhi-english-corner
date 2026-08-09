@@ -2,7 +2,7 @@
 
 一个本地优先的英语练习站：查词、识图、自动背词、单词大冒险。
 
-[在线使用](https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/) · [English](./README.en.md) · [数据与许可](./docs/OPEN_DATA.md) · [贡献指南](./CONTRIBUTING.md)
+[在线使用](https://english.xn--9iq784ays8a.com/) · [日语角](https://nihongo.xn--9iq784ays8a.com/) · [English](./README.en.md) · [数据与许可](./docs/OPEN_DATA.md) · [贡献指南](./CONTRIBUTING.md)
 
 ## 现在有什么
 
@@ -13,6 +13,7 @@
 - 浏览器语音自动连播：表达 → 中文释义 → 英文例句。
 - 图片英文 OCR，worker、模型和 WASM 均从本项目同源加载；图片不上传。
 - 10 关单词大冒险，答题结果进入本地学习进度。
+- 页头可直接切换到独立发布的行小之日语角。
 
 等级不是产品主轴。条目可以保留 CEFR 等轻量元数据，但首页、查词和练习都以词库与场景组织。
 
@@ -51,4 +52,4 @@ npm test
 
 ## 项目状态
 
-当前是可运行的首发版本。源码位于 [GitHub 仓库](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner)，`main` 分支通过 GitHub Actions 自动发布到 [GitHub Pages](https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/)。
+当前是可运行的首发版本。源码位于 [GitHub 仓库](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner)，`main` 分支通过 GitHub Actions 自动发布到 [GitHub Pages](https://english.xn--9iq784ays8a.com/)。

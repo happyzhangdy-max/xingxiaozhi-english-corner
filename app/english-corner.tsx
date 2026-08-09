@@ -24,6 +24,10 @@ const PRIMARY_NAV: Array<{ view: AppView; label: string; short: string }> = [
   { view: "adventure", label: "大冒险", short: "PLAY" },
 ];
 
+const NIHONGO_URL =
+  process.env.NEXT_PUBLIC_NIHONGO_URL ??
+  "https://nihongo.xn--9iq784ays8a.com/";
+
 function searchEntries(query: string) {
   const normalized = query.trim().toLocaleLowerCase();
   if (!normalized) return [];
@@ -95,6 +99,10 @@ export function EnglishCorner() {
 
         <div className="header-actions">
           <ThemeToggle />
+          <a className="header-language" href={NIHONGO_URL}>
+            <span>日语角</span>
+            <small>日本語</small>
+          </a>
           <button className="header-autoplay" type="button" onClick={() => openAutoplay()}>
             <span aria-hidden="true">◉</span>
             自动背词

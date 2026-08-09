@@ -1,6 +1,6 @@
 # Project State
 
-Updated: 2026-08-09
+Updated: 2026-08-10
 
 ## Product identity
 
@@ -23,12 +23,13 @@ Updated: 2026-08-09
 - Autoplay review with speed controls and mastery/favorite actions
 - Ten-stage vocabulary adventure and due review queue
 - Responsive editorial interface with desktop and mobile navigation
+- Custom-domain deployment at `https://english.行小之.com/` with a header switch to `https://nihongo.行小之.com/`
 
 ## Repository state
 
 Project root: `G:\workcraft\xingxiaozhi-english-corner`
 
-The public repository is `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`. GitHub Pages workflow publishing, HTTPS enforcement, and private vulnerability reporting are enabled. The live site is `https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/`.
+The public repository is `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`. GitHub Pages workflow publishing, HTTPS enforcement, and private vulnerability reporting are enabled. The live site is `https://english.行小之.com/`.
 
 ## Release validation
 

@@ -4,8 +4,16 @@ import { resolve } from "node:path";
 const outputRoot = resolve("out");
 const html = readFileSync(resolve(outputRoot, "index.html"), "utf8");
 const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const configuredBasePath = process.env.GITHUB_PAGES_BASE_PATH;
 const inferredBasePath = html.match(/(?:src|href)="([^"?]*)\/_next\//)?.[1];
-const basePath = repositoryName ? `/${repositoryName}` : inferredBasePath || "";
+const basePath =
+  configuredBasePath === "/"
+    ? ""
+    : configuredBasePath !== undefined
+    ? configuredBasePath
+    : repositoryName
+      ? `/${repositoryName}`
+      : inferredBasePath || "";
 
 const assetReferences = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
   .map((match) => match[1])
@@ -31,6 +39,9 @@ if (!html.includes("<title>行小之 · 英语角</title>")) {
 }
 if (basePath && !html.includes(`${basePath}/_next/`)) {
   throw new Error(`Static assets are not prefixed with ${basePath}.`);
+}
+if (!basePath && !html.includes('/_next/')) {
+  throw new Error("Static assets are not rooted at the custom domain.");
 }
 if (missingReferences.length || missingOcrAssets.length) {
   throw new Error(

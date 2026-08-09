@@ -2,7 +2,7 @@
 
 A local-first English practice site for lookup, image OCR, autoplay review, and vocabulary adventures.
 
-[Live site](https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/) · [简体中文](./README.md) · [Open data](./docs/OPEN_DATA.md) · [Contributing](./CONTRIBUTING.md)
+[Live site](https://english.xn--9iq784ays8a.com/) · [Japanese Corner](https://nihongo.xn--9iq784ays8a.com/) · [简体中文](./README.md) · [Open data](./docs/OPEN_DATA.md) · [Contributing](./CONTRIBUTING.md)
 
 ## Features
 
@@ -13,6 +13,7 @@ A local-first English practice site for lookup, image OCR, autoplay review, and 
 - Browser speech autoplay: expression → Chinese meaning → English example.
 - Local image OCR with same-origin worker, English model, and WASM assets. Images are not uploaded.
 - A ten-stage vocabulary adventure whose answers update local progress.
+- A header switch to the independently deployed Japanese Corner.
 
 Levels are optional metadata, not the primary navigation or learning model.
 
@@ -47,4 +48,4 @@ Progress and favorites stay in browser `localStorage`. Image recognition runs wi
 - Project-authored learning content: [CC BY 4.0](./CONTENT_LICENSE.md)
 - Third-party software and data: their respective licenses, documented in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)
 
-Source lives in the [public GitHub repository](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner). The `main` branch deploys automatically to [GitHub Pages](https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/) through GitHub Actions.
+Source lives in the [public GitHub repository](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner). The `main` branch deploys automatically to [GitHub Pages](https://english.xn--9iq784ays8a.com/) through GitHub Actions.
