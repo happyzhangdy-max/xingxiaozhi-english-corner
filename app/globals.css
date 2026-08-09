@@ -187,12 +187,45 @@ button:disabled {
   letter-spacing: 0.1em;
 }
 
+.header-actions {
+  display: flex;
+  align-items: stretch;
+  justify-self: end;
+}
+
+.header-language {
+  display: flex;
+  min-width: 96px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border-left: 1px solid var(--line);
+  background: transparent;
+  color: var(--paper-faint);
+  text-decoration: none;
+}
+
+.header-language:hover {
+  background: rgba(215, 255, 63, 0.07);
+  color: var(--paper);
+}
+
+.header-language span {
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.header-language small {
+  font: 700 8px/1 var(--mono);
+  letter-spacing: 0.1em;
+}
+
 .header-autoplay {
   display: flex;
   min-width: 150px;
   align-items: center;
   justify-content: center;
-  justify-self: end;
   gap: 9px;
   padding: 0 26px;
   background: var(--acid);
@@ -1845,6 +1878,19 @@ button:disabled {
     min-width: 0;
     padding: 0 15px;
     font-size: 10px;
+  }
+
+  .header-language {
+    min-width: 58px;
+    padding: 0 10px;
+  }
+
+  .header-language span {
+    font-size: 10px;
+  }
+
+  .header-language small {
+    font-size: 7px;
   }
 
   .home-hero {

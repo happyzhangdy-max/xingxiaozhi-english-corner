@@ -29,8 +29,12 @@ jobs:
         run: npm run build:pages
         env:
           GITHUB_PAGES: "true"
-          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          GITHUB_PAGES_BASE_PATH: "/"
+          NEXT_PUBLIC_SITE_URL: https://english.xn--9iq784ays8a.com/
+          NEXT_PUBLIC_NIHONGO_URL: https://nihongo.xn--9iq784ays8a.com/
       - run: npm run verify:pages
+        env:
+          GITHUB_PAGES_BASE_PATH: "/"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: out

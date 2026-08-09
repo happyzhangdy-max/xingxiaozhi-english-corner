@@ -35,6 +35,8 @@ test("server-renders the English Corner homepage", async () => {
   assert.match(html, /识图/);
   assert.match(html, /自动背词/);
   assert.match(html, /单词大冒险/);
+  assert.match(html, /href="https:\/\/nihongo\.xn--9iq784ays8a\.com\/"/);
+  assert.match(html, /日语角/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is working/);
 });
 

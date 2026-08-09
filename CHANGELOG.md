@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented here.
 
+## [Unreleased]
+
+### Changed
+
+- Publish the English Corner at `english.行小之.com` with root-relative Pages assets and a direct switch to `nihongo.行小之.com`.
+
 ## [0.1.0] - 2026-08-09
 
 ### Added

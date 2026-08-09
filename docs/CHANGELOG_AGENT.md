@@ -1,5 +1,9 @@
 # Agent Changelog
 
+## 2026-08-10
+
+- Prepared root-relative GitHub Pages output for `english.行小之.com` and added a responsive header switch to `nihongo.行小之.com`, preserving the existing apex personal site.
+
 ## 2026-08-09
 
 - Created the vinext/React application and original 行小之 visual system.
