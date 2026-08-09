@@ -1,5 +1,6 @@
 import { getBank, type DictionaryEntry } from "../dictionary-data";
 import { speakEnglish } from "../speech";
+import styles from "./home-panel.module.css";
 import type { AppView } from "./types";
 
 type HomePanelProps = {
@@ -27,25 +28,24 @@ export function HomePanel({
 }: HomePanelProps) {
   return (
     <main id="main-content" className="view-shell">
-      <section className="home-hero" aria-labelledby="home-title">
-        <div className="home-hero-copy">
+      <section className={`${styles.hero} home-hero`} aria-labelledby="home-title">
+        <div className={`${styles.heroCopy} home-hero-copy`}>
           <p className="eyebrow">XINGXIAOZHI / ENGLISH PRACTICE FIELD</p>
           <h1 id="home-title">
-            把英语，
-            <br />
-            <em>说到嘴边。</em>
+            把英语，<em>说到嘴边。</em>
           </h1>
           <p className="hero-intro">
             不背孤立词义。查一条，听一句，做一次判断；让高频表达在真实语境里反复出现。
           </p>
         </div>
-        <div className="hero-counter" aria-hidden="true">
-          EN
+        <div className={styles.heroMark} aria-hidden="true">
+          <span>EN</span>
+          <small>LOCAL-FIRST</small>
         </div>
       </section>
 
-      <section className="home-search" aria-label="搜索英语表达">
-        <label htmlFor="home-search">想找哪种说法？</label>
+      <section className={`${styles.searchSection} home-search`} aria-label="查词">
+        <label htmlFor="home-search">查词 · LOOK UP</label>
         <div className="search-control">
           <span aria-hidden="true">⌕</span>
           <input
@@ -88,86 +88,83 @@ export function HomePanel({
         )}
       </section>
 
-      <section className="action-grid four-actions" aria-label="首页核心功能">
+      <section className={styles.primaryGrid} aria-label="首页主功能">
         <button
-          className="action-card action-card-paper"
-          type="button"
-          onClick={() => onNavigate("dictionary")}
-        >
-          <span className="action-index">01 / LOOK UP</span>
-          <span className="action-symbol" aria-hidden="true">
-            ⌕
-          </span>
-          <strong>查词</strong>
-          <span>通用、职场岗位和场景词库统一搜索</span>
-          <b aria-hidden="true">打开词库 →</b>
-        </button>
-        <button
-          className="action-card action-card-scan"
+          className={`${styles.primaryCard} ${styles.scanCard}`}
           type="button"
           onClick={() => onNavigate("scan")}
         >
-          <span className="action-index">02 / SCAN</span>
-          <span className="action-symbol" aria-hidden="true">
+          <span className={styles.cardIcon} aria-hidden="true">
             ▣
           </span>
-          <strong>识图</strong>
-          <span>图片留在本机，识别英文后逐词查询</span>
-          <b aria-hidden="true">选择图片 →</b>
-        </button>
-        <button className="action-card action-card-acid" type="button" onClick={onOpenAutoplay}>
-          <span className="action-index">03 / AUTOPLAY</span>
-          <span className="action-symbol" aria-hidden="true">
-            ◉
+          <span className={styles.cardCopy}>
+            <strong>拍照识图</strong>
+            <small>图片留在本机 · 识别后逐词查</small>
           </span>
-          <strong>自动背词</strong>
-          <span>按当前词库连播：术语 → 释义 → 例句</span>
-          <b aria-hidden="true">开始播放 →</b>
+          <span className={styles.cardArrow} aria-hidden="true">
+            →
+          </span>
         </button>
         <button
-          className="action-card action-card-signal"
+          className={`${styles.primaryCard} ${styles.autoplayCard}`}
+          type="button"
+          onClick={onOpenAutoplay}
+        >
+          <span className={styles.cardIcon} aria-hidden="true">
+            ◉
+          </span>
+          <span className={styles.cardCopy}>
+            <strong>自动背单词</strong>
+            <small>职场与场景词库 · 术语到例句连播</small>
+          </span>
+          <span className={styles.cardArrow} aria-hidden="true">
+            →
+          </span>
+        </button>
+      </section>
+
+      <section className={styles.planSection} aria-label="我的学习进度">
+        <button className={styles.planCard} type="button" onClick={() => onNavigate("review")}>
+          <span className={styles.planIcon} aria-hidden="true">
+            ↻
+          </span>
+          <span className={styles.planBody}>
+            <strong>我的学习进度</strong>
+            <small>
+              已学习 {stats.touched} 条 · 已掌握 {stats.mastered} 条 · 今日待复习 {stats.due} 条
+            </small>
+            <span className={styles.progressTrack} aria-hidden="true">
+              <span style={{ width: `${stats.completion}%` }} />
+            </span>
+          </span>
+          <span className={styles.cardArrow} aria-hidden="true">
+            →
+          </span>
+        </button>
+      </section>
+
+      <section className={styles.adventureSection} aria-label="单词大冒险">
+        <button
+          className={styles.adventureCard}
           type="button"
           onClick={() => onNavigate("adventure")}
         >
-          <span className="action-index">04 / ADVENTURE</span>
-          <span className="action-symbol" aria-hidden="true">
+          <span className={styles.adventureIcon} aria-hidden="true">
             ⚑
           </span>
-          <strong>单词大冒险</strong>
-          <span>带着当前词库闯关，答对积能量，答错进复习队列</span>
-          <b aria-hidden="true">进入地图 →</b>
-        </button>
-      </section>
-
-      <section className="progress-strip" aria-label="学习概览">
-        <button type="button" onClick={() => onNavigate("dictionary")}>
-          <strong>{stats.touched}</strong>
-          <span>已接触</span>
-        </button>
-        <button type="button" onClick={() => onNavigate("review")}>
-          <strong>{stats.mastered}</strong>
-          <span>已掌握</span>
-        </button>
-        <button type="button" onClick={() => onNavigate("dictionary")}>
-          <strong>{stats.favorite}</strong>
-          <span>已收藏</span>
-        </button>
-        <div className="progress-meter">
-          <div>
-            <strong>{stats.completion}%</strong>
-            <span>词库进度</span>
-          </div>
-          <span className="progress-track" aria-hidden="true">
-            <span style={{ width: `${stats.completion}%` }} />
+          <span className={styles.adventureBody}>
+            <strong>单词大冒险</strong>
+            <small>带上当前职场或场景词库，边答题边复习</small>
+            <span className={styles.adventureChips} aria-hidden="true">
+              <span>10 段闯关</span>
+              <span>{stats.favorite} 条收藏可练</span>
+            </span>
           </span>
-        </div>
+          <span className={styles.cardArrow} aria-hidden="true">
+            →
+          </span>
+        </button>
       </section>
-
-      <button className="review-link" type="button" onClick={() => onNavigate("review")}>
-        <span>到期复习</span>
-        <strong>{stats.due ? `${stats.due} 条今天再见` : "今天没有到期内容"}</strong>
-        <span aria-hidden="true">→</span>
-      </button>
     </main>
   );
 }

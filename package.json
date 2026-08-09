@@ -16,7 +16,7 @@
     "build:pages": "npm run sync:ocr-assets && next build",
     "verify:pages": "node scripts/verify-pages.mjs",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/theme-contract.test.mjs",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/theme-contract.test.mjs tests/home-layout-contract.test.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/tesseract"
   },
