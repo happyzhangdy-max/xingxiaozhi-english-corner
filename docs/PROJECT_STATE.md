@@ -28,8 +28,13 @@ Updated: 2026-08-09
 
 Project root: `G:\workcraft\xingxiaozhi-english-corner`
 
-The local repository is initialized on `main` and connected to the public repository at `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`. GitHub Pages workflow publishing and private vulnerability reporting are enabled.
+The public repository is `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`. GitHub Pages workflow publishing, HTTPS enforcement, and private vulnerability reporting are enabled. The live site is `https://happyzhangdy-max.github.io/xingxiaozhi-english-corner/`.
 
-## Active goal
+## Release validation
 
-Push the initial `main` commit, then verify hosted CI and the live GitHub Pages URL.
+- Initial `main` commit: `718e190`
+- Pages build and deployment: successful
+- CI: successful on Windows, macOS, and Linux
+- Live desktop flows: lookup, autoplay, adventure start, and image OCR verified
+- Live 390 × 844 viewport: mobile navigation visible, no horizontal overflow
+- Live browser console: zero errors and warnings during the tested flows

@@ -4,11 +4,12 @@ Updated: 2026-08-09
 
 ## Active
 
-- [ ] Push `main`, then verify hosted CI and the live GitHub Pages site.
+No release-blocking tasks.
 
 ## Completed
 
 - [x] Confirm `happyzhangdy-max`, create the public repository, and enable private vulnerability reporting and Pages workflow publishing.
+- [x] Push `main`; pass Windows, macOS, and Linux CI; deploy and verify the live GitHub Pages site.
 - [x] Implement homepage, lookup, image OCR, autoplay, adventure, and secondary due review.
 - [x] Add 14 banks / 126 unique entries, including nine workplace areas and four scenario banks.
 - [x] Keep OCR and learning progress local-first.

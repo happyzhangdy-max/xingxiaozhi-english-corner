@@ -16,3 +16,4 @@
 - Verified desktop and mobile navigation, lookup, autoplay, adventure, image OCR, and OCR-to-dictionary handoff in a real browser.
 - Verified the repository-subpath static export with zero browser console errors, plus production build, rendered HTML tests, lint, zero production audit findings, and entry-ID uniqueness.
 - Created `happyzhangdy-max/xingxiaozhi-english-corner` as a public GitHub repository and enabled Pages workflow publishing and private vulnerability reporting.
+- Published `main`, passed Windows/macOS/Linux CI, and verified the live Pages lookup, autoplay, adventure, OCR, mobile layout, and zero-error browser console.
