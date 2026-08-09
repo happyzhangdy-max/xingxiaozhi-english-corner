@@ -1,0 +1,19 @@
+name: Word-bank proposal
+description: Propose a term, correction, role bank, or scenario bank.
+title: "[Word bank]: "
+labels: [content]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed content
+      description: Include English, Chinese meaning, context, and why it is useful.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and license
+      description: Link the source and state its reuse license. Write “project-authored” when applicable.
+    validations:
+      required: true

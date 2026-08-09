@@ -1,0 +1,18 @@
+# Agent Changelog
+
+## 2026-08-09
+
+- Created the vinext/React application and original 行小之 visual system.
+- Implemented lookup, local OCR, autoplay, vocabulary adventure, mastery/favorites, and due review.
+- Added 14 banks / 126 entries with O*NET 30.3 attribution for workplace taxonomy.
+- Added local OCR asset synchronization and excluded generated model files from Git.
+- Upgraded Next from 16.2.6 to 16.3.0 and refreshed React, Vite, Wrangler, and Cloudflare tooling after dependency audit findings.
+- Replaced starter tests and removed unused database, auth, preview, and placeholder asset surfaces.
+- Removed the unused server-side image-optimization endpoint; image OCR remains browser-only.
+- Added bilingual README, licenses, contribution/security governance, data notices, issue templates, Dependabot, and three-OS CI.
+- Added a repository-subpath-aware static export and GitHub Pages deployment workflow.
+- Fixed browser OCR model loading by shipping an uncompressed English trained-data asset and explicitly disabling gzip decoding.
+- Made the Pages artifact verifier infer a repository subpath when it runs outside GitHub Actions while still enforcing the exact repository path in CI.
+- Verified desktop and mobile navigation, lookup, autoplay, adventure, image OCR, and OCR-to-dictionary handoff in a real browser.
+- Verified the repository-subpath static export with zero browser console errors, plus production build, rendered HTML tests, lint, zero production audit findings, and entry-ID uniqueness.
+- Created `happyzhangdy-max/xingxiaozhi-english-corner` as a public GitHub repository and enabled Pages workflow publishing and private vulnerability reporting.
