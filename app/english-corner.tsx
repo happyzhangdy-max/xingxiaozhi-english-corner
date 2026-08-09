@@ -14,6 +14,7 @@ import { DictionaryPanel } from "./components/dictionary-panel";
 import { HomePanel } from "./components/home-panel";
 import { ReviewPanel } from "./components/review-panel";
 import { ScanPanel } from "./components/scan-panel";
+import { ThemeToggle } from "./components/theme-toggle";
 import type { AppView } from "./components/types";
 
 const PRIMARY_NAV: Array<{ view: AppView; label: string; short: string }> = [
@@ -92,10 +93,13 @@ export function EnglishCorner() {
           ))}
         </nav>
 
-        <button className="header-autoplay" type="button" onClick={() => openAutoplay()}>
-          <span aria-hidden="true">◉</span>
-          自动背词
-        </button>
+        <div className="header-actions">
+          <ThemeToggle />
+          <button className="header-autoplay" type="button" onClick={() => openAutoplay()}>
+            <span aria-hidden="true">◉</span>
+            自动背词
+          </button>
+        </div>
       </header>
 
       {view === "home" && (

@@ -1,0 +1,363 @@
+:root[data-theme="light"] {
+  --ink: #f5f5f7;
+  --ink-soft: rgba(255, 255, 255, 0.78);
+  --ink-raised: #ffffff;
+  --paper: #1d1d1f;
+  --paper-dim: #515154;
+  --paper-faint: #747477;
+  --acid: #0071e3;
+  --acid-dark: #0057b8;
+  --signal: #ff3b30;
+  --sky: #32ade6;
+  --line: rgba(29, 29, 31, 0.11);
+  --line-strong: rgba(29, 29, 31, 0.2);
+  --serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  color-scheme: light;
+}
+
+body,
+.site-header,
+.mobile-nav,
+.search-control,
+.dictionary-search,
+.lesson-card,
+.adventure-question,
+.review-card,
+.autoplay-card,
+.autoplay-overlay {
+  transition:
+    background-color 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 280ms ease,
+    border-color 280ms ease,
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+button:active,
+.header-language:active {
+  transform: scale(0.97);
+  transition: transform 100ms ease-out;
+}
+
+.header-actions {
+  display: flex;
+  align-items: stretch;
+  justify-self: end;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 54px;
+  min-width: 54px;
+  place-items: center;
+  border-left: 1px solid var(--line);
+  background: transparent;
+  color: var(--paper-faint);
+}
+
+.theme-toggle:hover {
+  background: rgba(215, 255, 63, 0.07);
+  color: var(--paper);
+}
+
+.theme-toggle-symbol {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* The light theme is a separate material system, not a color inversion. */
+[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 12% -8%, rgba(0, 113, 227, 0.14), transparent 30%),
+    radial-gradient(circle at 92% 18%, rgba(50, 173, 230, 0.11), transparent 27%),
+    #f5f5f7;
+  background-attachment: fixed;
+}
+
+[data-theme="light"] .site-header,
+[data-theme="light"] .autoplay-header {
+  border-color: rgba(29, 29, 31, 0.08);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 10px 32px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(28px) saturate(180%);
+}
+
+[data-theme="light"] .primary-nav button:hover,
+[data-theme="light"] .primary-nav button.is-active,
+[data-theme="light"] .header-language:hover,
+[data-theme="light"] .theme-toggle:hover {
+  background: rgba(0, 113, 227, 0.07);
+}
+
+[data-theme="light"] .theme-toggle-symbol {
+  border-color: rgba(0, 113, 227, 0.24);
+  background: rgba(0, 113, 227, 0.08);
+  color: var(--acid);
+}
+
+[data-theme="light"] .home-hero h1,
+[data-theme="light"] .section-heading h1,
+[data-theme="light"] .action-card strong,
+[data-theme="light"] .adventure-brief h2,
+[data-theme="light"] .adventure-word strong,
+[data-theme="light"] .adventure-result h2,
+[data-theme="light"] .review-card h2,
+[data-theme="light"] .autoplay-card h2 {
+  font-weight: 720;
+  letter-spacing: -0.055em;
+}
+
+[data-theme="light"] .hero-counter {
+  color: rgba(0, 113, 227, 0.075);
+}
+
+[data-theme="light"] .search-control,
+[data-theme="light"] .dictionary-search {
+  overflow: hidden;
+  border-color: rgba(29, 29, 31, 0.09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 12px 36px rgba(15, 23, 42, 0.07);
+  backdrop-filter: blur(22px) saturate(170%);
+}
+
+[data-theme="light"] .search-control input::placeholder,
+[data-theme="light"] .dictionary-search input::placeholder,
+[data-theme="light"] .recognized-copy textarea::placeholder {
+  color: #8e8e93;
+}
+
+[data-theme="light"] .search-preview {
+  overflow: hidden;
+  margin-top: 8px;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(24px) saturate(180%);
+}
+
+[data-theme="light"] .search-preview-row:hover,
+[data-theme="light"] .bank-tabs button:hover,
+[data-theme="light"] .bank-tabs button.is-active,
+[data-theme="light"] .progress-strip > button:hover,
+[data-theme="light"] .review-link:hover {
+  background: rgba(0, 113, 227, 0.06);
+}
+
+[data-theme="light"] .action-grid,
+[data-theme="light"] .lesson-grid {
+  gap: 16px;
+  padding: 20px 0;
+  border: 0;
+}
+
+[data-theme="light"] .action-card,
+[data-theme="light"] .lesson-card {
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 14px 40px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(22px) saturate(160%);
+}
+
+[data-theme="light"] .action-card {
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 240ms ease;
+}
+
+[data-theme="light"] .action-card:hover,
+[data-theme="light"] .action-card-acid:hover,
+[data-theme="light"] .action-card-signal:hover,
+[data-theme="light"] .action-card-scan:hover,
+[data-theme="light"] .lesson-card:hover {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 22px 56px rgba(15, 23, 42, 0.1);
+  transform: translateY(-3px);
+}
+
+[data-theme="light"] .action-card:active,
+[data-theme="light"] .lesson-card:active {
+  transform: scale(0.985);
+}
+
+[data-theme="light"] .progress-strip,
+[data-theme="light"] .review-link,
+[data-theme="light"] .scan-workbench,
+[data-theme="light"] .adventure-question,
+[data-theme="light"] .review-card,
+[data-theme="light"] .autoplay-card {
+  overflow: hidden;
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 42px rgba(15, 23, 42, 0.065);
+  backdrop-filter: blur(24px) saturate(165%);
+}
+
+[data-theme="light"] .progress-strip,
+[data-theme="light"] .review-link,
+[data-theme="light"] .scan-workbench {
+  margin: 20px 0;
+}
+
+[data-theme="light"] .bank-tabs {
+  gap: 8px;
+  border: 0;
+}
+
+[data-theme="light"] .bank-tabs button,
+[data-theme="light"] .filter-row button,
+[data-theme="light"] .autoplay-rate button,
+[data-theme="light"] .word-chips button,
+[data-theme="light"] .secondary-button,
+[data-theme="light"] .load-more,
+[data-theme="light"] .listen-button,
+[data-theme="light"] .mastery-button {
+  border-color: rgba(29, 29, 31, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+[data-theme="light"] .bank-tabs button {
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 16px;
+}
+
+[data-theme="light"] .lesson-card,
+[data-theme="light"] .adventure-question,
+[data-theme="light"] .review-card,
+[data-theme="light"] .autoplay-card {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+[data-theme="light"] .mastery-button.is-active,
+[data-theme="light"] .adventure-options button.is-correct,
+[data-theme="light"] .adventure-feedback {
+  background: rgba(0, 113, 227, 0.08);
+}
+
+[data-theme="light"] .adventure-options button.is-wrong,
+[data-theme="light"] .adventure-feedback.is-wrong,
+[data-theme="light"] .form-error {
+  background: rgba(255, 59, 48, 0.08);
+}
+
+[data-theme="light"] .form-error {
+  color: #b42318;
+}
+
+[data-theme="light"] .scan-dropzone {
+  background: rgba(255, 255, 255, 0.48);
+}
+
+[data-theme="light"] .replace-image {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(18px) saturate(170%);
+}
+
+[data-theme="light"] .privacy-note {
+  border-color: rgba(0, 113, 227, 0.2);
+  border-radius: 16px;
+  background: rgba(0, 113, 227, 0.06);
+}
+
+[data-theme="light"] .recognized-copy textarea {
+  border-color: rgba(29, 29, 31, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.055) inset;
+}
+
+[data-theme="light"] .adventure-map span,
+[data-theme="light"] .adventure-options button {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+[data-theme="light"] .autoplay-overlay {
+  background:
+    radial-gradient(circle at 50% 25%, rgba(0, 113, 227, 0.13), transparent 36%),
+    #f5f5f7;
+}
+
+[data-theme="light"] .autoplay-card {
+  border-radius: 32px;
+}
+
+[data-theme="light"] .mobile-nav {
+  border-color: rgba(29, 29, 31, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 -10px 34px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(28px) saturate(180%);
+}
+
+@media (max-width: 720px) {
+  .theme-toggle {
+    width: 46px;
+    min-width: 46px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-brand {
+    padding-right: 8px;
+  }
+
+  .header-language {
+    min-width: 52px;
+    padding: 0 7px;
+  }
+
+  .header-autoplay {
+    width: 46px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .header-autoplay > span {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .site-header,
+  .mobile-nav,
+  .search-control,
+  .dictionary-search,
+  .lesson-card,
+  .autoplay-header,
+  .autoplay-card {
+    background: var(--ink-raised) !important;
+    backdrop-filter: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --line: rgba(236, 232, 220, 0.42);
+    --line-strong: rgba(236, 232, 220, 0.68);
+  }
+
+  :root[data-theme="light"] {
+    --line: rgba(29, 29, 31, 0.34);
+    --line-strong: rgba(29, 29, 31, 0.55);
+  }
+}
