@@ -35,7 +35,7 @@ jobs:
       - run: npm run verify:pages
         env:
           GITHUB_PAGES_BASE_PATH: "/"
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: out
 
