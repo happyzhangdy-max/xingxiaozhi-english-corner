@@ -30,7 +30,7 @@ Launch with 126 project-authored contextual entries and O*NET-informed workplace
 
 ## 2026-08-09 - Dual license
 
-Status: active pending publication confirmation
+Status: active
 
 ### Decision
 
@@ -42,4 +42,4 @@ Status: active
 
 ### Decision
 
-Publish a static Next export from GitHub Actions. Inject the repository base path during the Pages build so JavaScript, CSS, and local OCR assets work under `/<repository>/`. Keep vinext build support for local/Sites compatibility, but the public launch does not require a server.
+Publish a root-relative static Next export from GitHub Actions at `https://english.行小之.com/`. Keep vinext build support for local/Sites compatibility, but the public launch does not require a server.

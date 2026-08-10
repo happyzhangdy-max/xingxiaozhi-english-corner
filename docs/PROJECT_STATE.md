@@ -33,8 +33,9 @@ The public repository is `https://github.com/happyzhangdy-max/xingxiaozhi-englis
 
 ## Release validation
 
-- Initial `main` commit: `718e190`
+- Custom-domain release commit: `6167b32`
 - Pages build and deployment: successful
+- Custom-domain DNS and Let's Encrypt certificate: valid; HTTPS enforcement enabled
 - CI: successful on Windows, macOS, and Linux
 - Live desktop flows: lookup, autoplay, adventure start, and image OCR verified
 - Live 390 × 844 viewport: mobile navigation visible, no horizontal overflow
