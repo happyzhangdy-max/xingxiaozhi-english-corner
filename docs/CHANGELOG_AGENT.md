@@ -2,6 +2,9 @@
 
 ## 2026-08-10
 
+- Migrated the English and Japanese Corner production files to versioned releases on the Tencent Cloud Hong Kong server, with direct Caddy hosting and atomic symlinks; GitHub remains the source and CI repository.
+- Made light mode the English Corner first-visit default while preserving stored user preference and the light/dark switch.
+- Replaced automatic GitHub Pages deployment with root-relative static-export verification and artifact retention in GitHub Actions.
 - Prepared root-relative GitHub Pages output for `english.行小之.com` and added a responsive header switch to `nihongo.行小之.com`, preserving the existing apex personal site.
 - Published both language corners on `english.行小之.com` and `nihongo.行小之.com`, enabled valid Let's Encrypt certificates and HTTP-to-HTTPS redirects, and verified the existing apex personal site remained unchanged.
 

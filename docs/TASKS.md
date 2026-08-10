@@ -9,8 +9,10 @@ No release-blocking tasks.
 ## Completed
 
 - [x] Publish the English Corner at `english.行小之.com` and connect it to the Japanese Corner custom domain without replacing the existing apex homepage.
-- [x] Confirm `happyzhangdy-max`, create the public repository, and enable private vulnerability reporting and Pages workflow publishing.
-- [x] Push `main`; pass Windows, macOS, and Linux CI; deploy and verify the live GitHub Pages site.
+- [x] Confirm `happyzhangdy-max`, create the public repository, and enable private vulnerability reporting and static-export CI.
+- [x] Push `main`; pass Windows, macOS, and Linux CI; deploy and verify the live Tencent Cloud site.
+- [x] Migrate production files from GitHub Pages to versioned Tencent Cloud releases served directly by Caddy.
+- [x] Make the Apple-style light theme the first-visit default while preserving the persistent light/dark switch.
 - [x] Implement homepage, lookup, image OCR, autoplay, adventure, and secondary due review.
 - [x] Add 14 banks / 126 unique entries, including nine workplace areas and four scenario banks.
 - [x] Keep OCR and learning progress local-first.
@@ -25,8 +27,8 @@ No release-blocking tasks.
 - `npm run typecheck`
 - `npm test`
 - `npm audit --omit=dev --audit-level=high`
-- GitHub Pages build with repository base path and static asset probe
-- Playwright desktop/mobile smoke tests with zero console errors on the static Pages artifact
+- Root-relative production static export and static asset probe
+- Playwright desktop/mobile smoke tests with zero console errors on the production artifact
 - Data invariant check: 14 banks, 126 entries, 126 unique IDs
 
 ## Accepted upstream risk

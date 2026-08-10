@@ -34,7 +34,7 @@ npm run typecheck
 npm test
 ```
 
-`npm run build:pages` creates the static `out/` site. The Pages workflow builds and deploys it from `main`, injecting the repository sub-path at build time.
+`npm run build:pages` creates the root-relative production site in `out/`. GitHub Actions verifies and archives this bundle; production is released from the bundle to the Tencent Cloud Hong Kong server and served directly by Caddy.
 
 ## Data and privacy
 
@@ -48,4 +48,4 @@ Progress and favorites stay in browser `localStorage`. Image recognition runs wi
 - Project-authored learning content: [CC BY 4.0](./CONTENT_LICENSE.md)
 - Third-party software and data: their respective licenses, documented in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)
 
-Source lives in the [public GitHub repository](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner). The `main` branch deploys automatically to [GitHub Pages](https://english.xn--9iq784ays8a.com/) through GitHub Actions.
+Source lives in the [public GitHub repository](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner). The live site is served directly from Tencent Cloud Hong Kong at [english.行小之.com](https://english.xn--9iq784ays8a.com/); GitHub is the source and CI repository, not the production runtime.

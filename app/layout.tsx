@@ -5,15 +5,12 @@ import "./theme.css";
 const themeBootScript = `(() => {
   try {
     const saved = window.localStorage.getItem("xingxiaozhi-theme");
-    const theme = saved === "light" || saved === "dark"
-      ? saved
-      : window.matchMedia("(prefers-color-scheme: light)").matches
-        ? "light"
-        : "dark";
+    const theme = saved === "light" || saved === "dark" ? saved : "light";
     document.documentElement.dataset.theme = theme;
     document.documentElement.style.colorScheme = theme;
   } catch {
-    document.documentElement.dataset.theme = "dark";
+    document.documentElement.dataset.theme = "light";
+    document.documentElement.style.colorScheme = "light";
   }
 })();`;
 
@@ -44,17 +41,19 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f5f7" },
-    { media: "(prefers-color-scheme: dark)", color: "#12140f" },
-  ],
+  themeColor: "#f5f5f7",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html
+      lang="zh-CN"
+      data-theme="light"
+      style={{ colorScheme: "light" }}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
       </head>

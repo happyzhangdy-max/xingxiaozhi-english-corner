@@ -36,7 +36,7 @@ npm test
 
 `npm test` 会先执行生产构建，再检查服务器渲染的首页核心内容。
 
-`npm run build:pages` 会生成 GitHub Pages 所需的 `out/` 静态站点。`main` 分支上的 Pages workflow 会自动构建并发布，仓库子路径会在构建时注入，无需硬编码。
+`npm run build:pages` 会在 `out/` 生成生产用的根路径静态站点。GitHub Actions 负责验证并留存构建产物；正式版本会把该产物发布到腾讯云香港服务器，由 Caddy 直接提供访问。
 
 ## 数据与隐私
 
@@ -52,4 +52,4 @@ npm test
 
 ## 项目状态
 
-当前是可运行的首发版本。源码位于 [GitHub 仓库](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner)，`main` 分支通过 GitHub Actions 自动发布到 [GitHub Pages](https://english.xn--9iq784ays8a.com/)。
+当前是可运行的首发版本。源码位于 [GitHub 仓库](https://github.com/happyzhangdy-max/xingxiaozhi-english-corner)；正式站点由腾讯云香港服务器直接托管：[english.行小之.com](https://english.xn--9iq784ays8a.com/)。GitHub 仅作为源码与 CI 仓库，不承担生产访问。

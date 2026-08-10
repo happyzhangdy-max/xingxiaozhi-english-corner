@@ -18,8 +18,8 @@ test("renders an accessible theme switch", async () => {
   const response = await render();
   const html = await response.text();
 
-  assert.match(html, /切换为亮色主题/);
-  assert.match(html, /aria-pressed="false"/);
+  assert.match(html, /切换为暗色主题/);
+  assert.match(html, /aria-pressed="true"/);
 });
 
 test("defines persistent light-theme and accessibility contracts", async () => {
@@ -29,7 +29,9 @@ test("defines persistent light-theme and accessibility contracts", async () => {
   ]);
 
   assert.match(layout, /xingxiaozhi-theme/);
-  assert.match(layout, /prefers-color-scheme: light/);
+  assert.match(layout, /saved : "light"/);
+  assert.match(layout, /data-theme="light"/);
+  assert.doesNotMatch(layout, /matchMedia/);
   assert.match(themeCss, /:root\[data-theme="light"\]/);
   assert.match(themeCss, /prefers-reduced-transparency: reduce/);
   assert.match(themeCss, /prefers-contrast: more/);
