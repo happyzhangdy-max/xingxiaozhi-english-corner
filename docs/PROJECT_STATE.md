@@ -10,7 +10,7 @@ Updated: 2026-08-10
 
 - TypeScript, React 19, Next-compatible App Router
 - vinext and Vite targeting a Cloudflare worker runtime
-- Next static export and GitHub Actions for GitHub Pages
+- Next static export, GitHub Actions verification, and Tencent Cloud Hong Kong/Caddy production hosting
 - Browser SpeechSynthesis for pronunciation and autoplay
 - Tesseract.js with local English model assets for image OCR
 - Browser `localStorage` for learning state; no backend database
@@ -23,19 +23,20 @@ Updated: 2026-08-10
 - Autoplay review with speed controls and mastery/favorite actions
 - Ten-stage vocabulary adventure and due review queue
 - Responsive editorial interface with desktop and mobile navigation
-- Custom-domain deployment at `https://english.行小之.com/` with a header switch to `https://nihongo.行小之.com/`
+- Direct Tencent Cloud deployment at `https://english.行小之.com/` with a header switch to `https://nihongo.行小之.com/`
+- Light Apple-style UI on first visit, with persistent light/dark switching
 
 ## Repository state
 
-Project root: `G:\workcraft\xingxiaozhi-english-corner`
+Repository: `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`
 
-The public repository is `https://github.com/happyzhangdy-max/xingxiaozhi-english-corner`. GitHub Pages workflow publishing, HTTPS enforcement, and private vulnerability reporting are enabled. The live site is `https://english.行小之.com/`.
+GitHub provides source hosting, CI, static-export artifacts, and private vulnerability reporting. Production files are uploaded to versioned release directories and activated through an atomic stable symlink. Caddy serves the live site at `https://english.行小之.com/`.
 
 ## Release validation
 
-- Custom-domain release commit: `6167b32`
-- Pages build and deployment: successful
-- Custom-domain DNS and Let's Encrypt certificate: valid; HTTPS enforcement enabled
+- Static export, release archive, remote file hashes, and Caddy configuration: verified
+- Custom-domain A record and HTTPS termination on the Tencent Cloud server: verified
+- Atomic release symlink and previous release directory: available for rollback
 - CI: successful on Windows, macOS, and Linux
 - Live desktop flows: lookup, autoplay, adventure start, and image OCR verified
 - Live 390 × 844 viewport: mobile navigation visible, no horizontal overflow

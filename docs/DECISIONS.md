@@ -36,10 +36,10 @@ Status: active
 
 Use MIT for source code and CC BY 4.0 for project-authored learning content. Preserve separate third-party attribution and modification notices.
 
-## 2026-08-09 - GitHub Pages is the public runtime
+## 2026-08-10 - Tencent Cloud Hong Kong is the public runtime
 
 Status: active
 
 ### Decision
 
-Publish a root-relative static Next export from GitHub Actions at `https://english.行小之.com/`. Keep vinext build support for local/Sites compatibility, but the public launch does not require a server.
+Build a root-relative static export in CI, then release the verified files to versioned directories on the Tencent Cloud Hong Kong server and serve them directly through Caddy at `https://english.行小之.com/`. GitHub remains the source and CI repository; it is not the production runtime. Keep the previous release directory for atomic rollback.
